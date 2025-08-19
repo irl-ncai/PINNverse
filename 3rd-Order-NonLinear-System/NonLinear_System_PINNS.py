@@ -103,7 +103,7 @@ train_eta = tf.random.uniform((500, 1), minval=0.0, maxval=1.0)
 
 # 📂 Load Analytic Solution
 try:
-    data = pd.read_csv("mydata1.csv", header=None)
+    data = pd.read_csv("SampleData.csv", header=None)
     analytic_eta = tf.constant(data.iloc[:, 0].values.reshape(-1, 1), dtype=tf.float32)
     analytic_theta = tf.constant(data.iloc[:, 1].values.reshape(-1, 1), dtype=tf.float32)
     print("✅ Analytic data loaded successfully.")

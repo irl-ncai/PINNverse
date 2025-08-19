@@ -40,6 +40,40 @@ This project uses a hybrid PINN approach that combines three loss components to 
 
 The training process minimizes a weighted sum of these three losses, resulting in a model that is both physically consistent and accurate.
 
+## 💻 Key Code Snippets
+
+Here are the essential code snippets from the project that define the physics and boundary conditions:
+
+### System of Equations
+
+The PINN is designed to solve the following system of coupled, non-linear ordinary differential equations:
+
+```python
+# Falkner-Skan Equation (f)
+R1 = f3 + f * f2 - f1**2 + LAMBDA * theta
+
+# Energy Equation (θ)
+R2 = theta2 + PRANDTL * f * theta1
+
+# Combined physics loss
+physics_loss = tf.reduce_mean(tf.square(R1)) + tf.reduce_mean(tf.square(R2))
+```
+
+### Boundary Conditions
+
+The neural network is constrained by a set of boundary conditions at two points in the domain:
+
+```python
+# Boundary conditions at η = 0
+bc_at_0 = tf.square(f0) + tf.square(f1_0) + tf.square(theta0 - 1.0)
+
+# Boundary conditions as η approaches infinity
+bc_at_inf = tf.square(f1_inf - 1.0) + tf.square(theta_inf)
+
+# Combined boundary condition loss
+bc_loss = bc_at_0 + bc_at_inf
+```
+
 ## 📊 Sample Results
 
 This project generates plots to visualize the model's performance and predictions. The following image is an example of the output you can expect after a successful training run.

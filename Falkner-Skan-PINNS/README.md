@@ -44,6 +44,6 @@ The training process minimizes a weighted sum of these three losses, resulting i
 
 This project generates plots to visualize the model's performance and predictions. The following image is an example of the output you can expect after a successful training run.
 
-![Temperature Profile Comparison](Falkner-Skan-PINNS/Results/Comparison.png)
+![Temperature Profile Comparison](https://github.com/faizanfaiz11422/PINNverse/blob/4619d037deae6a677c2f26d30bbee567ccd0ae1f/Falkner-Skan-PINNS/Results/Comparison.png)
 
 *This plot compares the PINN's temperature profile (`θ(η)`) prediction (blue line) against the analytic solution from your data (red dashed line).*

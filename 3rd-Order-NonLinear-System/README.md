@@ -153,4 +153,5 @@ for epoch in range(EPOCHS):
 ## 📊 **Results**
 
 The model's performance is visualized through several plots. The training loss and R-squared ($R^2$) score track the model's convergence and compatibility with the analytical data over time. The final plots compare the PINN-predicted solutions with the analytical data.
+
 ![Alt text](https://github.com/faizanfaiz11422/PINNverse/blob/776e498deba4a77f05abd7a48e8ca4c7ef87f241/3rd-Order-NonLinear-System/Result.png)

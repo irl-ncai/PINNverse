@@ -2,7 +2,7 @@
 
 A Physics-Informed Neural Network (PINN) designed to solve the Falkner-Skan boundary-layer equations. This project serves as a comprehensive example of how to combine deep learning with fundamental fluid dynamics and heat transfer principles.
 
-[![Open In Colab]([https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/your-username/PINNverse/blob/main/Falkner-Skan-Project/pinn_falkner_skan.ipynb](https://colab.research.google.com/drive/1kDYqmtj8o0sYbS_xzuM3eNzSXGVqAgN3?usp=sharing))
+[![Open In Colab]([https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1kDYqmtj8o0sYbS_xzuM3eNzSXGVqAgN3?usp=sharing)
 
 ## 🚀 Getting Started
 
@@ -26,7 +26,7 @@ To get this project up and running, follow these simple steps.
 4.  **Run the Code**
     Execute the main Python script from your terminal.
     ```bash
-    python pinn_falkner_skan.py
+    python FS_PINNS.py
     ```
     *Alternatively, you can click the "Open In Colab" button above to run the code in a Google Colab notebook.*
 

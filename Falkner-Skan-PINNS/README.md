@@ -1,8 +1,8 @@
-# PINNverse
+# Falkner-Skan PINN
 
-A collection of Physics-Informed Neural Networks (PINNs) for solving engineering and science problems. This repository demonstrates how to combine neural networks with fundamental physics to create robust, data-informed models for various applications.
+A Physics-Informed Neural Network (PINN) designed to solve the Falkner-Skan boundary-layer equations. This project serves as a comprehensive example of how to combine deep learning with fundamental fluid dynamics and heat transfer principles.
 
-This project's initial focus is on a detailed example of a PINN solving the **Falkner-Skan equations**, a classical boundary-layer problem in fluid dynamics.
+[![Open In Colab]([https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/your-username/PINNverse/blob/main/Falkner-Skan-Project/pinn_falkner_skan.ipynb](https://colab.research.google.com/drive/1kDYqmtj8o0sYbS_xzuM3eNzSXGVqAgN3?usp=sharing))
 
 ## 🚀 Getting Started
 
@@ -10,8 +10,8 @@ To get this project up and running, follow these simple steps.
 
 1.  **Clone the Repository**
     ```bash
-    git clone [https://github.com/your-username/PINNverse.git](https://github.com/your-username/PINNverse.git)
-    cd PINNverse
+    git clone https://github.com/faizanfaiz11422/PINNverse.git
+    cd PINNverse/Falkner-Skan-PINNS
     ```
 
 2.  **Install Dependencies**
@@ -21,13 +21,14 @@ To get this project up and running, follow these simple steps.
     ```
 
 3.  **Add Your Data**
-    Place your `mydata1.csv` file directly into the repository's root folder. This file contains the analytic solution used to guide the PINN's training.
+    Place your `SampleData.csv` file directly into the repository's root folder. This file contains the analytic solution used to guide the PINN's training.
 
 4.  **Run the Code**
     Execute the main Python script from your terminal.
     ```bash
     python pinn_falkner_skan.py
     ```
+    *Alternatively, you can click the "Open In Colab" button above to run the code in a Google Colab notebook.*
 
 ## 🧠 How It Works
 
@@ -35,27 +36,14 @@ This project uses a hybrid PINN approach that combines three loss components to 
 
 1.  **Physics Loss**: This is the core of the PINN. It ensures the model's output satisfies the governing differential equations of the Falkner-Skan problem.
 2.  **Boundary Condition (BC) Loss**: This component enforces the known conditions at the edges of the domain (e.g., at the wall and far away from the wall).
-3.  **Supervised Data Loss**: This is where your analytic data comes in. It compares the model's prediction directly with your `mydata1.csv` file, helping to guide the PINN toward the correct solution and improve accuracy.
+3.  **Supervised Data Loss**: This is where your analytic data comes in. It compares the model's prediction directly with your `SampleData.csv` file, helping to guide the PINN toward the correct solution and improve accuracy.
 
 The training process minimizes a weighted sum of these three losses, resulting in a model that is both physically consistent and accurate.
 
-## 📈 Results
+## 📊 Sample Results
 
-After training, the script will output three plots:
+This project generates plots to visualize the model's performance and predictions. The following image is an example of the output you can expect after a successful training run.
 
-1.  A comparison of the PINN's temperature profile (`θ(η)`) against the analytic solution from your CSV file.
-2.  The training loss history, which shows how the model's error decreases over time.
-3.  A plot of the PINN's predicted stream function (`f(η)`).
+![Temperature Profile Comparison](Falkner-Skan-PINNS/Results/Comparison.png)
 
-A successful run will show the PINN's prediction curve closely matching the analytic data, demonstrating the power of the PINN approach.
-
-## 💡 Future Projects
-
-`PINNverse` is designed to be a growing collection. Future projects may include:
-
-* Solving other fluid dynamics problems (e.g., Couette flow).
-* Applying PINNs to heat transfer or structural mechanics.
-* Exploring different neural network architectures and activation functions.
-
-Feel free to contribute by adding your own PINN projects!
-
+*This plot compares the PINN's temperature profile (`θ(η)`) prediction (blue line) against the analytic solution from your data (red dashed line).*

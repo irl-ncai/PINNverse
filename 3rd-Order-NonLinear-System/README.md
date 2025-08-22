@@ -8,7 +8,7 @@ This project utilizes a Physics-Informed Neural Network (PINN) to solve a 3rd or
 
 You can run this project instantly in a Google Colab environment by clicking the button below. This is the fastest way to get started without any local setup.
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YOUR_REPO_LINK_HERE)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1xf_1aiV6FIUxoie4E26Ka64fFDvJCrH_?usp=sharing)
 
 ---
 ## 🚀 Getting Started
